@@ -23,8 +23,9 @@
 		<div class="inner">
 			<h1>Diego Prieto</h1>
 			<h2></h2>
-			<a href="https://github.com/daprieto1" class="button">
-				<small>View profile on</small> GitHub</a>
+			<a id="git-hub-link" href="https://github.com/daprieto1" class="button" target="_blank">
+				<small>View profile on</small> GitHub
+			</a>
 		</div>
 	</header>
 
@@ -90,7 +91,7 @@
 			<aside id="sidebar">
 				<img src="images/me.jpg" alt="">
 
-				<a href="files/resume.pdf" target="_blank" class="button">
+				<a id="pdf-resume" href="files/resume.pdf" target="_blank" class="button">
 					<small>Hoja de Vida</small> .png file
 				</a>
 
@@ -145,6 +146,8 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 			var buttons = [];
+			buttons.push({ name: 'GitHub', element: $("#git-hub-link") });
+			buttons.push({ name: 'Resume', element: $("#pdf-resume") });
 			buttons.push({ name: 'LinkedIn', element: $("#social-network-linkedin") });
 			buttons.push({ name: 'Medium', element: $("#social-network-medium") });
 			buttons.push({ name: 'Facebook', element: $("#social-network-facebook") });
