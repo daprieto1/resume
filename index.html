@@ -106,21 +106,23 @@
 	</div>
 
 	<script type="text/javascript">
-		$("#social-network-linkedin").click(function (event) {
-			console.log('event');
-			console.log(event);
-			console.log(this);
-			var cb = generateCallback($(this));
-			event.preventDefault();
-			mixpanel.track("Clicked Link", { "Domain": "daprieto1.github.io/resume/" }, cb);
-			setTimeout(cb, 500);
-		})
+		$(document).ready(function () {
+			$("#social-network-linkedin").click(function (event) {
+				console.log('event');
+				console.log(event);
+				console.log(this);
+				var cb = generateCallback($(this));
+				event.preventDefault();
+				mixpanel.track("Clicked Link", { "Domain": "daprieto1.github.io/resume/" }, cb);
+				setTimeout(cb, 500);
+			})
 
-		function generateCallback(a) {
-			return function () {
-				window.location = a.attr("href");
+			function generateCallback(a) {
+				return function () {
+					window.location = a.attr("href");
+				}
 			}
-		}
+		});
 	</script>
 
 	<!-- JQuery -->
