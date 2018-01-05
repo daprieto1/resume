@@ -69,19 +69,19 @@
 						<img src="images/linkedin.svg" alt="">
 					</a>
 
-					<a href="https://medium.com/@diego.alfonso.prieto.torres" target="_blank" class="social-network">
+					<a id="social-network-medium" href="https://medium.com/@diego.alfonso.prieto.torres" target="_blank" class="social-network">
 						<img src="images/medium.svg" alt="">
 					</a>
 
-					<a href="https://www.facebook.com/diego.p.torres.7" target="_blank" class="social-network">
+					<a id="social-network-facebook" href="https://www.facebook.com/diego.p.torres.7" target="_blank" class="social-network">
 						<img src="images/facebook.svg" alt="">
 					</a>
 
-					<a href="https://twitter.com/DiegoPrietoT" target="_blank" class="social-network">
+					<a id="social-network-twitter" href="https://twitter.com/DiegoPrietoT" target="_blank" class="social-network">
 						<img src="images/twitter.svg" alt="">
 					</a>
 
-					<a href="https://www.instagram.com/diego.prieto.torres/" target="_blank" class="social-network">
+					<a id="social-network-instagram" href="https://www.instagram.com/diego.prieto.torres/" target="_blank" class="social-network">
 						<img src="images/instagram.svg" alt="">
 					</a>
 				</section>
@@ -144,21 +144,25 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$("#social-network-linkedin").click(function (event) {
-				console.log('event');
-				console.log(event);
-				console.log(this);
-				var cb = generateCallback($(this));
-				event.preventDefault();
-				mixpanel.track("Clicked Link", { "Domain": "daprieto1.github.io/resume/" }, cb);
-				setTimeout(cb, 500);
-			})
+			$("#social-network-linkedin").click(function (event) {								
+				mixpanel.track("Clicked LinkedIn");
+			});
 
-			function generateCallback(a) {
-				return function () {
-					window.location = a.attr("href");
-				}
-			}
+			$("#social-network-medium").click(function (event) {								
+				mixpanel.track("Clicked LinkedIn");
+			});
+
+			$("#social-network-facebook").click(function (event) {								
+				mixpanel.track("Clicked LinkedIn");
+			});
+
+			$("#social-network-twitter").click(function (event) {								
+				mixpanel.track("Clicked LinkedIn");
+			});
+
+			$("#social-network-instagram").click(function (event) {								
+				mixpanel.track("Clicked LinkedIn");
+			});
 		});
 	</script>
 </body>
