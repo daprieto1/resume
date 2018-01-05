@@ -152,7 +152,7 @@
 			buttons.push({ name: 'Instagram', element: $("#social-network-instagram") });
 
 			buttons.forEach(function (button) {
-				button.click(function (event) {
+				button.element.click(function (event) {
 					console.log("Clicked " + button.name);
 					mixpanel.track("Clicked " + button.name);
 				});
