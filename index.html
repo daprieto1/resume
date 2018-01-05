@@ -109,18 +109,23 @@
 		$("#social-network-linkedin").click(function (event) {
 			console.log('event');
 			console.log(event);
-			var cb = generate_callback($(this));
+			console.log(this);
+			var cb = generateCallback($(this));
 			event.preventDefault();
 			mixpanel.track("Clicked Link", { "Domain": "daprieto1.github.io/resume/" }, cb);
 			setTimeout(cb, 500);
 		})
 
-		function generate_callback(a) {
+		function generateCallback(a) {
 			return function () {
 				window.location = a.attr("href");
 			}
 		}
 	</script>
+
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- end JQuery -->
 
 	<!-- HotJar Code -->
 	<!-- Hotjar Tracking Code for https://daprieto1.github.io/resume/ -->
