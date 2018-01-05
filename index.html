@@ -21,7 +21,7 @@
 <body>
 	<header>
 		<div class="inner">
-			<h1>Diego Prieto Torres</h1>
+			<h1>Diego Prieto</h1>
 			<h2></h2>
 			<a href="https://github.com/daprieto1" class="button">
 				<small>View profile on</small> GitHub</a>
@@ -105,26 +105,6 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$("#social-network-linkedin").click(function (event) {
-				console.log('event');
-				console.log(event);
-				console.log(this);
-				var cb = generateCallback($(this));
-				event.preventDefault();
-				mixpanel.track("Clicked Link", { "Domain": "daprieto1.github.io/resume/" }, cb);
-				setTimeout(cb, 500);
-			})
-
-			function generateCallback(a) {
-				return function () {
-					window.location = a.attr("href"); 
-				}
-			}
-		});
-	</script>
-
 	<!-- JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- end JQuery -->
@@ -160,6 +140,27 @@
 		mixpanel.init("6ffd6f5a5917fd0ec7758b813861cf4c");
 	</script>
 	<!-- end Mixpanel -->
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#social-network-linkedin").click(function (event) {
+				console.log('event');
+				console.log(event);
+				console.log(this);
+				var cb = generateCallback($(this));
+				event.preventDefault();
+				mixpanel.track("Clicked Link", { "Domain": "daprieto1.github.io/resume/" }, cb);
+				setTimeout(cb, 500);
+			})
+
+			function generateCallback(a) {
+				return function () {
+					window.location = a.attr("href");
+				}
+			}
+		});
+	</script>
 </body>
 
 </html>
