@@ -144,24 +144,18 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$("#social-network-linkedin").click(function (event) {								
-				mixpanel.track("Clicked LinkedIn");
-			});
+			var buttons = [];
+			buttons.push({ name: 'LinkedIn', element: $("#social-network-linkedin") });
+			buttons.push({ name: 'Medium', element: $("#social-network-medium") });
+			buttons.push({ name: 'Facebook', element: $("#social-network-facebook") });
+			buttons.push({ name: 'Twitter', element: $("#social-network-twitter") });
+			buttons.push({ name: 'Instagram', element: $("#social-network-instagram") });
 
-			$("#social-network-medium").click(function (event) {								
-				mixpanel.track("Clicked Medium");
-			});
-
-			$("#social-network-facebook").click(function (event) {								
-				mixpanel.track("Clicked Facebook");
-			});
-
-			$("#social-network-twitter").click(function (event) {								
-				mixpanel.track("Clicked Twitter");
-			});
-
-			$("#social-network-instagram").click(function (event) {								
-				mixpanel.track("Clicked Instagram");
+			buttons.forEach(function (button) {
+				button.click(function (event) {
+					console.log("Clicked " + button.name);
+					mixpanel.track("Clicked " + button.name);
+				});
 			});
 		});
 	</script>
