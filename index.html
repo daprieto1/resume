@@ -107,6 +107,8 @@
 
 	<script type="text/javascript">
 		$("#social-network-linkedin").click(function (event) {
+			console.log('event');
+			console.log(event);
 			var cb = generate_callback($(this));
 			event.preventDefault();
 			mixpanel.track("Clicked Link", { "Domain": "daprieto1.github.io/resume/" }, cb);
