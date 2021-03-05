@@ -1,0 +1,32 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "* V 1.0.0 *",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daprieto1/resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daprieto1/resume/issues"
+  },
+  "homepage": "https://github.com/daprieto1/resume#readme",
+  "devDependencies": {
+    "semantic-release": "17.3.9"
+  },
+  "release": {
+    "branches": [
+      "gh-pages"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
+  }
+}
